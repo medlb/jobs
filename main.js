@@ -7,7 +7,7 @@ document.getElementById("account-step").remove();document.getElementById("loader
 if(page=="page6"){window.location='#';}}
 function loadQuestions(){document.getElementById("mainQuest").innerHTML="";document.getElementsByClassName("main-question")[0].remove();document.getElementById("progbars").style.textAlign="center";document.getElementById("progbars").style.display='block';populate();}
 function Question(text,choices){this.text=text;this.choices=choices;}
-var questions=[new Question("Are you ready to work 6 hours a day ?",["Yes","No"]),new Question("What is your level of education ?",["University","I can write and read"]),new Question("Choose one of the following areas that suit your hobby or specialty ",[" Marketing "," Writing Articles "," CCTV Monitor "," Customer Service "])];function Quiz(questions){this.questions=questions;this.questionIndex=0;}
+var questions=[new Question("Are you ready to work 6 hours a day ",["Yes","No"]),new Question("What is your level of education ",["University","I can write and read"]),new Question("Choose one of the following areas that suit your hobby or specialty ",[" Marketing "," Writing Articles "," CCTV Monitor "," Customer Service "])];function Quiz(questions){this.questions=questions;this.questionIndex=0;}
 var quiz=new Quiz(questions);Quiz.prototype.getQuestionIndex=function(){return this.questions[this.questionIndex];}
 Quiz.prototype.isEnded=function(){return this.questions.length<=this.questionIndex;}
 Quiz.prototype.guess=function(){this.questionIndex++;}
